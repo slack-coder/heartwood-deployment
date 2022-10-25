@@ -50,7 +50,7 @@ To support heartwood, an ssh-agent session must be started and the user must be
 authorized using `rad-auth`.
 
 ```
-eval `ssh-gent`
+eval `ssh-agent`
 rad-auth
 ./bin/start
 ```
