@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+# Run me from the service's source directory
+set -e
+
+cargo install \
+    --path radicle-httpd
+cargo install \
+    --path radicle-node
+cargo install \
+    --path radicle-remote-helper
+cargo install \
+    --path radicle-tools

@@ -1,0 +1,7 @@
+export CARGO_HOME=/srv/heartwood/var/cargo
+export CARGO_INSTALL_ROOT=/srv/heartwood
+export HOME=/srv/heartwood
+export NODE_GIT_URL=http://192.168.1.2:8080
+export NODE_LISTEN_ADDR=192.168.1.2:8776
+export PATH=/srv/heartwood/bin:$PATH
+export RUSTUP_HOME=/srv/heartwood/var/rustup

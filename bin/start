@@ -1,0 +1,6 @@
+#!/bin/bash
+set -e
+
+tmux new-session -d -s heartwood -n node -- "echo bin/radicle-node | entr -r ./bin/radicle-node --git-url=$NODE_GIT_URL --listen=$NODE_LISTEN_ADDR"
+tmux new-window -t heartwood: -n httpd -- "echo bin/radicle-httpd | entr -r ./bin/radicle-httpd"
+tmux attach -t heartwood

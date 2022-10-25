@@ -1,0 +1,15 @@
+set -e
+
+UPDATE_REF="$1"
+
+# Avoid errors when using git commands w/ hooks.  Git uses it to track the Git
+# directory.
+unset GIT_DIR
+
+cd ..
+. ../../etc/environment
+
+BRANCH=$(git rev-parse --symbolic --abbrev-ref "$UPDATE_REF")
+if [ "$BRANCH" == "master" ]; then 
+    build
+fi
